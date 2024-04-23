@@ -1,0 +1,13 @@
+<Tit [title]="titlelabel()"></Tit>
+
+@if(user()) {
+  <section>
+    <img [srcset]="user()?.avatar" [alt]="user()!.first_name"/>
+  </section>
+  <<div>
+    <h3>{{user()?.first_name}} {{user()?.last_name}}</h3>
+  </div>
+
+}@else {
+  <p>Cargando información</p>
+}
